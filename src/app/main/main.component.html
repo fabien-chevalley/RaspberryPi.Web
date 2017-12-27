@@ -1,0 +1,29 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav>
+    <mat-nav-list (click)="sidenav.close()">
+      <ng-template let-item ngFor [ngForOf]="routes">
+        <a mat-list-item [routerLink]="[item.route]">
+          <mat-icon>{{item.icon}}</mat-icon>
+          <div>{{item.title}}</div>
+        </a>
+      </ng-template>
+    </mat-nav-list>
+  </mat-sidenav>
+  <div fxLayout="column" fxFill>
+    <mat-toolbar>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon class="mat-24">menu</mat-icon>
+      </button>
+      <button mat-icon-button (click)="goHome()">
+        <mat-icon class="mat-24">home</mat-icon>
+      </button>
+      <button mat-icon-button (click)="goBack()">
+        <mat-icon class="mat-24">keyboard_arrow_left</mat-icon>
+      </button>
+      <span fxFlex>{{ titleService.getTitle() }}</span>
+    </mat-toolbar>
+    <main class="mat-padding" fxFlex>
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</mat-sidenav-container>
