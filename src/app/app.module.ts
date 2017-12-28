@@ -22,6 +22,7 @@ const MATERIAL_MODULES: any[] = [
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { RaspberryPiModule } from './raspberry-pi/raspberry-pi.module';
 
 import { AppComponent } from './app.component';
 import { GarageComponent } from './garage/garage.component';
@@ -41,7 +42,8 @@ import { SettingsComponent } from './settings/settings.component';
     BrowserAnimationsModule,
     MATERIAL_MODULES,
     FlexLayoutModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RaspberryPiModule
   ],
   providers: [],
   bootstrap: [AppComponent]
