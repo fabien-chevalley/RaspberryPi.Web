@@ -19,12 +19,12 @@ export interface IMediaStream {
 })
 export class GarageComponent implements OnInit {
   public PinNumber = 7;   
-  public CurrentStream = 'http://jorat26.ch:8000/hls/raspberry.m3u8';
+  public CurrentStream = 'http://localhost:8000/hls/raspberry.m3u8';
 
   constructor(private titleService: Title,
     private raspberryPiService: RaspberryPiService,
     private settingsService: SettingsService) {
-      raspberryPiService.connect('http://jorat26.ch:10443/woopsa', settingsService.Username, settingsService.Password);
+      raspberryPiService.connect('http://localhost.ch:10443/woopsa', settingsService.Username, settingsService.Password);
   }
 
   async ngOnInit() {
