@@ -95,7 +95,7 @@ export class WoopsaClient {
     return this.sendRequest(invokeRequest).then(response => {
       if(response)
       {
-        let readResult = <WoopsaReadResult> JSON.parse((<any> response).body);
+        let readResult = <WoopsaReadResult> response;
         if (readResult != null)
           return WoopsaClient.mapValue(readResult);
       }

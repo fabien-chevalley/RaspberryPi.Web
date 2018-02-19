@@ -12,11 +12,6 @@ import { Title } from '@angular/platform-browser';
 export class MainComponent implements OnInit {
   routes: Object[] = [
     {
-      title: 'Garage',
-      icon: 'directions_car',
-      route: '/garage'
-    },
-    {
       title: 'Paramètres',
       icon: 'settings',
       route: '/settings'

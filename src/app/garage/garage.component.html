@@ -1,4 +1,34 @@
-<p>
-  <button mat-raised-button color="primary"
-          (click)="pulse()">Open / Close</button>
-</p>
+<mat-card>
+  <vg-player>
+    <vg-overlay-play></vg-overlay-play>
+    <vg-buffering></vg-buffering>
+
+    <vg-controls>
+        <vg-play-pause></vg-play-pause>
+
+
+        <vg-scrub-bar>
+            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+            <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+        </vg-scrub-bar>
+
+        <vg-time-display vgProperty="left" vgFormat="mm:ss"></vg-time-display>
+
+        <vg-mute></vg-mute>
+        <vg-volume></vg-volume>
+
+        <vg-fullscreen></vg-fullscreen>
+    </vg-controls>
+
+    <video #media
+           [vgMedia]="media"
+           [vgHls]="CurrentStream"
+           id="singleVideo"
+           crossorigin>
+    </video>
+  </vg-player>
+
+  <mat-card-actions fxLayoutAlign="center center">
+    <button mat-raised-button color="primary" (click)="pulseDoor()">Open / Close</button>
+  </mat-card-actions>
+</mat-card>

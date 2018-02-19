@@ -1,3 +1,11 @@
-<p>
-  settings works!
-</p>
+<div class="settings" fxLayout="column">
+
+  <mat-input-container class=min-width-350>
+    <input matInput placeholder="Username" [(ngModel)]="settings.Username">
+  </mat-input-container>
+
+  <mat-input-container class=min-width-350>
+    <input matInput placeholder="Password" type=password [(ngModel)]="settings.Password">
+  </mat-input-container>
+
+</div>
